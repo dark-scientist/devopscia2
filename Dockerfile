@@ -1,5 +1,7 @@
-# Nginx serves the static page
-FROM nginx:alpine
-RUN rm -f /usr/share/nginx/html/index.html
-COPY index.html /usr/share/nginx/html/index.html
+FROM public.ecr.aws/nginx/nginx:alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY index.html /usr/share/nginx/html/
 EXPOSE 80
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+CMD ["nginx", "-g", "daemon off;"]
