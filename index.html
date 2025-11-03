@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prithwin CIA 2 – DevOps</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+           margin:0; padding:0; background:#0b1220; color:#e5e7eb; }
+    header { padding:48px 24px; text-align:center; background: linear-gradient(135deg,#111827,#0b1220 60%); }
+    h1 { margin:0 0 6px; font-size:40px; }
+    h2 { margin:0; font-weight:500; color:#9ca3af; }
+    main { max-width:800px; margin:32px auto; padding:0 24px 64px; }
+    .card { background:#111827; border:1px solid #1f2937; border-radius:16px; padding:24px; box-shadow: 0 6px 24px rgba(0,0,0,0.25); }
+    .ok { display:inline-block; padding:6px 12px; border-radius:9999px; border:1px solid #334155; color:#a3e635; font-weight:600; }
+    footer { text-align:center; color:#9ca3af; margin-top:32px;}
+    code { background:#0b1220; padding:2px 6px; border-radius:6px; }
+    a { color:#60a5fa; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prithwin CIA 2 – DevOps</h1>
+    <h2>Automated CI/CD on <b>AWS</b> with Jenkins, Docker, and GitHub</h2>
+  </header>
+  <main>
+    <div class="card">
+      <p>This static page demonstrates a full CI/CD pipeline:</p>
+      <ul>
+        <li>Source: GitHub (<code>main</code> branch)</li>
+        <li>Build &amp; Test: Jenkins Pipeline</li>
+        <li>Containerization: Docker (Nginx serves this page)</li>
+        <li>Registry: Amazon ECR</li>
+        <li>Deployment: Amazon ECS Fargate + ALB</li>
+        <li>Logs: Amazon CloudWatch</li>
+      </ul>
+      <p class="ok">Pipeline Deployed ✅</p>
+    </div>
+    <footer>© 2025 Prithwin CIA 2 – DevOps</footer>
+  </main>
+</body>
+</html>
