@@ -100,7 +100,7 @@ pipeline {
                             ALB_URL=\$(aws cloudformation describe-stacks \
                                 --stack-name ${STACK_NAME} \
                                 --region ${AWS_REGION} \
-                                --query 'Stacks[0].Outputs[?OutputKey==\`ServiceURL\`].OutputValue' \
+                                --query "Stacks[0].Outputs[?OutputKey=='ServiceURL'].OutputValue" \
                                 --output text)
                             
                             echo "Application deployed at: http://\${ALB_URL}"
